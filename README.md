@@ -40,6 +40,16 @@ npm install wndb-with-exceptions --save
 API
 ---
 
+### findSense(query, callback)
+
+Queries WordNet to find full information on a single sense of a term. The callback
+can accept one or two arguments, if two, the first is an error flag and the second
+the results.
+
+```javascript
+var wordnet = new WordNet()
+wordnet.findSense('ring#n#8', console.log);
+
 ### Lexicographer Files (lexFilenum)
 
 |File Number|Name|Contents|
@@ -196,16 +206,6 @@ wordnet.querySense('axes#n', console.log);
 
 Similar to `querySense(query, callback)` but returning a promise.
 
-
-### findSense(query, callback)
-
-Queries WordNet to find full information on a single sense of a term. The callback
-can accept one or two arguments, if two, the first is an error flag and the second
-the results.
-
-```javascript
-var wordnet = new WordNet()
-wordnet.findSense('lie#v#1', console.log);
 ```
 
 ### findSenseAsync(query)

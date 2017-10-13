@@ -49,6 +49,7 @@ the results.
 ```javascript
 var wordnet = new WordNet()
 wordnet.findSense('ring#n#8', console.log);
+```
 
 ### Lexicographer Files (lexFilenum)
 
@@ -205,8 +206,6 @@ wordnet.querySense('axes#n', console.log);
 ### querySenseAsync(query)
 
 Similar to `querySense(query, callback)` but returning a promise.
-
-```
 
 ### findSenseAsync(query)
 
